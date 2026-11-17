@@ -1,0 +1,104 @@
+/* ===== Warna dan ukuran: ubah di sini untuk mengganti tampilan ===== */
+:root {
+    --warna-utama: #1e3a5f;
+    --warna-utama-gelap: #162c49;
+    --warna-latar: #f4f6f8;
+    --warna-kartu: #ffffff;
+    --warna-teks: #222222;
+    --warna-garis: #dde1e6;
+    --warna-sukses: #d4edda;
+    --warna-bahaya: #f8d7da;
+    --radius: 6px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--warna-latar);
+    color: var(--warna-teks);
+}
+
+/* ===== Bilah atas ===== */
+.topbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--warna-utama);
+    color: #fff;
+    padding: 10px 20px;
+}
+.topbar a { color: #fff; text-decoration: none; }
+.topbar a:hover { text-decoration: underline; }
+.brand { font-weight: bold; font-size: 18px; }
+.menu { display: flex; gap: 16px; }
+.userbox { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+.userbox select { width: auto; margin: 0; padding: 5px 8px; }
+.userbox form { margin: 0; }
+
+/* ===== Isi halaman ===== */
+.container { max-width: 1100px; margin: 20px auto; padding: 0 16px; }
+.card {
+    background: var(--warna-kartu);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+}
+
+/* ===== Tabel ===== */
+table { width: 100%; border-collapse: collapse; background: var(--warna-kartu); }
+th, td { padding: 8px 10px; border-bottom: 1px solid var(--warna-garis); text-align: left; }
+th { background: #eef1f5; }
+
+/* ===== Form dan tombol ===== */
+label { font-weight: bold; font-size: 14px; }
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0 14px;
+    border: 1px solid #c4c9d0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+button, .btn {
+    background: var(--warna-utama);
+    color: #fff;
+    border: 0;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+button:hover, .btn:hover { background: var(--warna-utama-gelap); }
+
+/* ===== Pesan ===== */
+.alert { padding: 10px 14px; border-radius: 4px; margin-bottom: 14px; }
+.alert.ok { background: var(--warna-sukses); }
+.alert.err { background: var(--warna-bahaya); }
+
+/* ===== Halaman login ===== */
+.login-page { display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+.login { width: 340px; }
+.login h1 { margin: 0 0 4px; color: var(--warna-utama); }
+.login p { margin: 0 0 18px; color: #666; font-size: 14px; }
+
+/* ===== Halaman admin ===== */
+.page-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.page-head h2 { margin: 0; }
+.aksi { display: flex; gap: 6px; }
+.aksi form { margin: 0; }
+.badge { padding: 2px 8px; border-radius: 10px; font-size: 12px; }
+.badge.aktif { background: var(--warna-sukses); }
+.badge.nonaktif { background: #e2e3e5; }
+.btn.secondary { background: #6c757d; }
+.checkline { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+.checkline input[type="checkbox"] { width: auto; margin: 0; }
+
+/* ===== Filter dan badge tambahan ===== */
+.filter { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; }
+.filter input, .filter select { width: auto; margin: 0; }
+.badge.info { background: #d6e4f5; margin-right: 4px; }
+textarea { font-family: inherit; }
